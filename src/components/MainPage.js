@@ -105,7 +105,7 @@ const Box = styled.div`
     border-radius: 5px;
     flex-direction: column;
     font-size: 16px;
-    padding: 23px 11px 11px 12px;
+    padding: 23px 11px 0 12px;
     position: relative;
     overflow: scroll;
     h3{
@@ -138,9 +138,9 @@ const Value = styled.span`
 `
 
 const Total = styled.p`
-    position: fixed;
-    bottom: 148px;
-    padding:8px 0px;
+    position: sticky;
+    bottom: 0px;
+    padding:10px 0px;
     rigth:10px;
     display:flex;
     width:300px;
