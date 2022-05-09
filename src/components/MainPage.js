@@ -16,10 +16,10 @@ export default function MainPage() {
     useEffect(() => {
         (async () => {
             try {
-                const logedUser = await axios.get("http://localhost:5000/main-page", {
+                const logedUser = await axios.get("https://my-wallet-back-app.herokuapp.com/main-page", {
                     headers: { Authorization: `Bearer ${user.token}` }
                 });
-                axios.get("http://localhost:5000/transactions", {headers: {Authorization: `Bearer ${user.token}`}})
+                axios.get("https://my-wallet-back-app.herokuapp.com/transactions", {headers: {Authorization: `Bearer ${user.token}`}})
                 .then((response) => {
                     setTransactions(response.data);
                 }).catch(e => console.log(e));

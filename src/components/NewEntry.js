@@ -15,7 +15,7 @@ export default function NewEntry(){
     const navigate = useNavigate();
 
     function postEntry(){
-        axios.post("http://localhost:5000/transactions", {value,description,type: user.transaction},{
+        axios.post("https://my-wallet-back-app.herokuapp.com/transactions", {value,description,type: user.transaction},{
             headers: { Authorization: `Bearer ${user.token}` }
         }).then(()=>{
             alert("Entrada postada com sucesso");
